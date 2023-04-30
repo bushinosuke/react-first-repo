@@ -39,7 +39,7 @@ function App() {
   };
   const weeklyWeatherData = [
     {date: '2023/04/16', weather: '雹', tempMax: '22', tempMin: '15'},
-    {date: '2021/10/11', weather: '曇り', tempMax: '20', tempMin: '10'}
+    {date: '2021/10/11', weather: '晴れ時々曇り', tempMax: '20', tempMin: '10'}
   ];
 
   getWeatherData();

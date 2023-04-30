@@ -1,6 +1,5 @@
 // WetherCard component
 // 現在の天気を表示するコンポーネント
-
 import { Grid, Typography } from '@mui/material';
 
 export const WeatherGrid = (props) => {
@@ -29,10 +28,7 @@ export const WeatherGrid = (props) => {
         <Grid item xs={6} sx={{ border: 2 }}>
           {`${wind_deg}/${wind_speed}`}
         </Grid>
-
       </Grid>
-
-
     </>
   );
 }
