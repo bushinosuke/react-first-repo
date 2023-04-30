@@ -1,8 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import { Title } from './components/Title';
-import { WeatherCard } from './components/WeatherCard';
-import { WeeklyWether } from './components/WeeklyWether';
+// import { WeatherCard } from './components/WeatherCard';
+// import { WeeklyWether } from './components/WeeklyWether';
 import axios from 'axios';
 import { WeatherGrid } from './components/WeatherGrid';
 //import CssBaseline from '@mui/material/CssBaseline'
