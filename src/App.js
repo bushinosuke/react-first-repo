@@ -36,7 +36,7 @@ function App() {
     temperature: '20',
     humidity: '50',
     wind_speed: '5',
-    wind_deg: '北'
+    wind_deg: '北東'
   };
   const weeklyWeatherData = [
     {date: '2023/04/16', weather: '雹', tempMax: '22', tempMin: '15'},
