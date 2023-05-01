@@ -28,7 +28,7 @@ function getWeatherData() {
 
 function App() {
   const weatherProps = {
-    city: '東京',
+    city: '北海道',
     date: '2021/10/10',
     time: '12:00',
     weather: '晴れ',
