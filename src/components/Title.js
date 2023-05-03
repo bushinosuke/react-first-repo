@@ -1,10 +1,11 @@
 // Title Component
+import { Box, Typography } from '@mui/material';
 import React from 'react';
 
 export const Title = () => {
   return (
-    <div className="title">
-      <h1>天気予報アプリ</h1>
-    </div>
+    <Box bgcolor="primary.dark" >
+      <Typography variant="h1" >天気予報アプリ</Typography>
+    </Box>
   );
 }

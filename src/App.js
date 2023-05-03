@@ -6,6 +6,9 @@ import axios from 'axios';
 import { WeatherGrid } from './components/WeatherGrid';
 //import CssBaseline from '@mui/material/CssBaseline'
 import { WeeklyWeatherStack } from './components/WeeklyWeatherStack';
+import { TitleOld } from './components/TitleOld';
+import { WeatherBox } from './components/WeatherBox';
+import { WeatherCard } from './components/WeatherCard';
 
 function getWeatherData() {
   axios
@@ -38,8 +41,8 @@ function App() {
     wind_deg: '北東'
   };
   const weeklyWeatherData = [
-    {date: '2023/04/16', weather: '雹', tempMax: '22', tempMin: '15'},
-    {date: '2021/10/11', weather: '晴れ時々曇り', tempMax: '20', tempMin: '10'}
+    { date: '2023/04/16', weather: '雹', tempMax: '22', tempMin: '15' },
+    { date: '2021/10/11', weather: '晴れ時々曇り', tempMax: '20', tempMin: '10' }
   ];
 
   getWeatherData();
@@ -49,6 +52,8 @@ function App() {
       <Title />
       {/* <WeatherCard {...weatherProps} /> */}
       <WeatherGrid {...weatherProps} />
+      <WeatherBox {...weatherProps} />
+      <WeatherCard {...weatherProps} />
       {/* <WeeklyWether weeklyWeatherData={weeklyWeatherData} /> */}
       <WeeklyWeatherStack weeklyWeatherData={weeklyWeatherData} />
     </>
