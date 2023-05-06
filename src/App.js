@@ -52,8 +52,8 @@ function App() {
       <Title />
       {/* <WeatherCard {...weatherProps} /> */}
       <WeatherGrid {...weatherProps} />
-      <WeatherBox {...weatherProps} />
-      <WeatherCard {...weatherProps} />
+      {/* <WeatherBox {...weatherProps} /> */}
+      {/* <WeatherCard {...weatherProps} /> */}
       {/* <WeeklyWether weeklyWeatherData={weeklyWeatherData} /> */}
       <WeeklyWeatherStack weeklyWeatherData={weeklyWeatherData} />
     </>

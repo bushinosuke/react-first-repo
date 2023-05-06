@@ -1,32 +1,34 @@
 // WetherCard component
 // 現在の天気を表示するコンポーネント
-import { Box, Container, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 export const WeatherBox = (props) => {
-  console.log(props);
+  // console.log(props);
   const { city, date, time, weather, temperature, humidity, wind_speed, wind_deg } = props;
   return (
     <>
-        <Box item xs={12} sx={{ border: 2 }}>
-          <Typography>
+      <Box sx={{ mx: 2, my: 2, bgcolor: 'grey.300' }}>
+        <Typography variant="caption">WeatherBox Component</Typography>
+        <Box>
+          <Typography variant="body1">
             {`${city} ${date} ${time}`}
           </Typography>
-        </Box>
-          <Typography>
-            {`${city} ${date} ${time}`}
+          <Typography variant="h2">
+            {weather}
           </Typography>
-        <Box item xs={6} sx={{ border: 2 }}>
-          {weather}
         </Box>
-        <Box item xs={6} sx={{ border: 2 }}>
-          {temperature}
+        <Box >
+          <Typography variant="h3">
+            {`${temperature}℃`}
+          </Typography>
         </Box>
-        <Box item xs={6} sx={{ border: 2 }}>
-          {humidity}
+        <Box >
+          {`${humidity}%`}
         </Box>
-        <Box sx={{ border: 2 }}>
-          {`${wind_deg}/${wind_speed}`}
+        <Box>
+          {`${wind_deg} ${wind_speed}m/s`}
         </Box>
+      </Box>
     </>
   );
 }

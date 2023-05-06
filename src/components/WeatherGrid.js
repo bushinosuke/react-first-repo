@@ -7,26 +7,30 @@ export const WeatherGrid = (props) => {
   const { city, date, time, weather, temperature, humidity, wind_speed, wind_deg } = props;
   return (
     <>
-      <Grid container spacing={4}>
-        <Grid item xs={12} sx={{ border: 2 }}>
-          <Typography>
-            {`${date} ${time}`}
+      <Grid container sx={{ mx: 2, my: 2, bgcolor: 'grey.300' }}>
+        <Grid item xs={12}>
+          <Typography variant="caption">WeatherGrid Component</Typography>
+        </Grid>
+        <Grid item xs={12}>
+          <Typography variant="body1">
+            {`${city} ${date} ${time}`}
           </Typography>
         </Grid>
-        <Grid item xs={12} sx={{ border: 2 }}>
-          {city}
+        <Grid item xs={6}>
+          <Typography variant="h2">
+            {weather}
+          </Typography>
         </Grid>
-        <Grid item xs={6} sx={{ border: 2 }}>
-          {weather}
+        <Grid item xs={6}>
+          <Typography variant="h3">
+            {`${temperature}℃`}
+          </Typography>
         </Grid>
-        <Grid item xs={6} sx={{ border: 2 }}>
-          {temperature}
+        <Grid item xs={12}>
+          {`${humidity}%`}
         </Grid>
-        <Grid item xs={6} sx={{ border: 2 }}>
-          {humidity}
-        </Grid>
-        <Grid item xs={6} sx={{ border: 2 }}>
-          {`${wind_deg}/${wind_speed}`}
+        <Grid item xs={12}>
+          {`${wind_deg} ${wind_speed}m/s`}
         </Grid>
       </Grid>
     </>
