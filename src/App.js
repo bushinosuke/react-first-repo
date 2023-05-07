@@ -10,6 +10,11 @@ function App() {
   // カスタムフックから天気情報を取得する
   const [weatherProps, weeklyWeatherData] = useFetchWeatherData();
 
+  // stateがnullならローディング中と表示する
+  if (!weatherProps || !weeklyWeatherData) {
+    return <div>ローディング中...</div>;
+  }
+
   return (
     <>
       <Title />

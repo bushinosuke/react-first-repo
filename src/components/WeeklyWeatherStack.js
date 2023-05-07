@@ -1,5 +1,5 @@
 // Weekly Wether Component
-import { Stack, Grid, Box } from '@mui/material';
+import { Stack, Grid, Box, Typography } from '@mui/material';
 import React from 'react';
 
 export const WeeklyWeatherStack = (props) => {
@@ -7,7 +7,7 @@ export const WeeklyWeatherStack = (props) => {
 
   return (
     <>
-      <h2>Weekly Wether</h2>
+      <Typography variant='subtitle1' bgcolor="primary.light" color="common.white" >週間予報</Typography>
       <Stack spacing={0} >
         {weeklyWeatherData.map((data,index) => {
           return (

@@ -3,8 +3,8 @@ import axios from 'axios';
 
 // open-meteoのAPIを使って天気予報を取得するカスタムフック
 export const useFetchWeatherData = () => {
-  const [weatherProps, setWeatherProps] = useState({});
-  const [weeklyWeatherData, setWeeklyWeatherData] = useState([]);
+  const [weatherProps, setWeatherProps] = useState(null);
+  const [weeklyWeatherData, setWeeklyWeatherData] = useState(null);
 
   // WMO天気コードと日本語の対応表をオブジェクトとして定義
   const weatherCodeMap = {
