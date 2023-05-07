@@ -3,13 +3,12 @@
 import { Grid, Typography } from '@mui/material';
 
 export const WeatherGrid = (props) => {
-  console.log(props);
   const { city, date, time, weather, temperature, humidity, wind_speed, wind_deg } = props;
   return (
     <>
       <Grid container sx={{ mx: 2, my: 2, bgcolor: 'grey.300' }}>
         <Grid item xs={12}>
-          <Typography variant="caption">WeatherGrid Component</Typography>
+          <Typography variant="h6">WeatherGrid Component</Typography>
         </Grid>
         <Grid item xs={12}>
           <Typography variant="body1">

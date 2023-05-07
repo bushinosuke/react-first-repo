@@ -1,60 +1,19 @@
 import './App.css';
 import { Title } from './components/Title';
-// import { WeatherCard } from './components/WeatherCard';
-// import { WeeklyWether } from './components/WeeklyWether';
 import axios from 'axios';
 import { WeatherGrid } from './components/WeatherGrid';
-//import CssBaseline from '@mui/material/CssBaseline'
 import { WeeklyWeatherStack } from './components/WeeklyWeatherStack';
-import { TitleOld } from './components/TitleOld';
-import { WeatherBox } from './components/WeatherBox';
-import { WeatherCard } from './components/WeatherCard';
-
-function getWeatherData() {
-  axios
-    .get('https://weather.tsukumijima.net/api/forecast/city/130010')
-    .then((response) => {
-      console.log(response.data);
-    });
-
-  return {
-    city: '東京',
-    date: '2021/10/10',
-    time: '12:00',
-    weather: '晴れ',
-    temperature: '20',
-    humidity: '50',
-    wind_speed: '5',
-    wind_deg: '北'
-  };
-}
+import { useEffect, useState } from 'react';
+import { useFetchWeatherData } from './hooks/useFetchWeatherData';
 
 function App() {
-  const weatherProps = {
-    city: '北海道',
-    date: '2021/10/10',
-    time: '12:00',
-    weather: '晴れ',
-    temperature: '20',
-    humidity: '50',
-    wind_speed: '5',
-    wind_deg: '北東'
-  };
-  const weeklyWeatherData = [
-    { date: '2023/04/16', weather: '雹', tempMax: '22', tempMin: '15' },
-    { date: '2021/10/11', weather: '晴れ時々曇り', tempMax: '20', tempMin: '10' }
-  ];
-
-  getWeatherData();
+  // カスタムフックから天気情報を取得する
+  const [weatherProps, weeklyWeatherData] = useFetchWeatherData();
 
   return (
     <>
       <Title />
-      {/* <WeatherCard {...weatherProps} /> */}
       <WeatherGrid {...weatherProps} />
-      {/* <WeatherBox {...weatherProps} /> */}
-      {/* <WeatherCard {...weatherProps} /> */}
-      {/* <WeeklyWether weeklyWeatherData={weeklyWeatherData} /> */}
       <WeeklyWeatherStack weeklyWeatherData={weeklyWeatherData} />
     </>
   );

@@ -5,7 +5,7 @@ import React from 'react';
 export const Title = () => {
   return (
     <Box bgcolor="primary.main" >
-      <Typography variant="h1" color="common.white" >天気予報アプリ</Typography>
+      <Typography variant="h6" color="common.white" >天気予報</Typography>
     </Box>
   );
 }
