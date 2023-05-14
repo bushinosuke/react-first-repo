@@ -1,6 +1,7 @@
 // Weekly Wether Component
 import { Stack, Grid, Box, Typography } from '@mui/material';
 import React from 'react';
+import { WeatherIcon } from './WeatherIcon';
 
 export const WeeklyWeatherStack = (props) => {
   const { weeklyWeatherData } = props;
@@ -17,7 +18,7 @@ export const WeeklyWeatherStack = (props) => {
           return (
             <Grid container sx={{ border: 1 }} key={index}>
               <Grid item xs={4}>{`${data.date} (${weekday.substring(0, 1)})`}</Grid>
-              <Grid item xs={4}>{data.weather}</Grid>
+              <Grid item xs={4}><WeatherIcon weather={data.weather} size={"2em"} /></Grid>
               <Grid item xs={4}>
                 <Grid container>
                   <Grid item xs={12}>{`最高：${data.tempMax}℃`}</Grid>

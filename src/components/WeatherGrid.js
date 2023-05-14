@@ -1,6 +1,8 @@
 // WetherCard component
 // 現在の天気を表示するコンポーネント
 import { Box, Grid, Typography } from '@mui/material';
+import { WiDaySunny } from "react-icons/wi";
+import { WeatherIcon } from './WeatherIcon';
 
 export const WeatherGrid = (props) => {
   const { city, date, time, weather, temperature, humidity, wind_speed, wind_deg } = props;
@@ -16,7 +18,8 @@ export const WeatherGrid = (props) => {
           </Grid>
           <Grid item xs={6}>
             <Typography variant="h2">
-              {weather}
+              {/* {weather} */}
+              <WeatherIcon weather={weather} size={"2em"} />
             </Typography>
           </Grid>
           <Grid item xs={6}>
