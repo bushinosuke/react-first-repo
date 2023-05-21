@@ -15,12 +15,12 @@ export const WeatherGrid = (props) => {
               {`${city} ${date} ${time}`}
             </Typography>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={4}>
             <Typography variant="h2">
               <WeatherIcon weather={weather} size={"2em"} />
             </Typography>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={4}>
             <Typography variant="h3">
               {`${temperature}℃`}
             </Typography>
