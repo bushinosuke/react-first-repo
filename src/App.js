@@ -17,7 +17,7 @@ function App() {
 
   return (
     <>
-      <Title />
+      <Title title={天気予報} />
       <WeatherGrid {...weatherProps} />
       <WeeklyWeatherStack weeklyWeatherData={weeklyWeatherData} />
     </>
